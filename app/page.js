@@ -138,6 +138,8 @@ export default function HomePage() {
             <div className="links">
               <a href="#services">Services</a>
               <a href="#process">Process</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#testimonials">Testimonials</a>
               <a className="btn dark sm" href="#contact">Baat karein</a>
             </div>
           </div>
@@ -239,6 +241,75 @@ export default function HomePage() {
                 <h4>Grow</h4>
                 <p>Customers badhane ke liye saath me kaam.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing">
+          <div className="wrap">
+            <h2 className="rv">Plans jo aapke level ke liye sahi ho.</h2>
+            <p className="sub rv">Har business ko ek aisa online setup chahiye jo trusted aur easy-to-convert ho.</p>
+            <div className="pricing-grid">
+              <article className="price-card rv">
+                <span className="plan-tag">Starter</span>
+                <h3>₹9,999</h3>
+                <p>Basic online presence</p>
+                <ul>
+                  <li>Business website</li>
+                  <li>Google Business setup</li>
+                  <li>1 social media post pack</li>
+                </ul>
+                <a className="btn ghost" href="#contact">Book now</a>
+              </article>
+
+              <article className="price-card featured rv">
+                <span className="plan-tag">Most Popular</span>
+                <h3>₹19,999</h3>
+                <p>Growth-focused package</p>
+                <ul>
+                  <li>Premium website + pages</li>
+                  <li>Google profile optimization</li>
+                  <li>Monthly content plan</li>
+                  <li>Lead capture setup</li>
+                </ul>
+                <a className="btn dark" href="#contact">Book now</a>
+              </article>
+
+              <article className="price-card rv">
+                <span className="plan-tag">Business</span>
+                <h3>Custom</h3>
+                <p>For scaling brands</p>
+                <ul>
+                  <li>Full digital strategy</li>
+                  <li>Brand identity support</li>
+                  <li>Ads + CRM integration</li>
+                  <li>Priority support</li>
+                </ul>
+                <a className="btn ghost" href="#contact">Talk to us</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials">
+          <div className="wrap">
+            <h2 className="rv">Customers ka trust.</h2>
+            <p className="sub rv">Business owners ne online visibility ko ek clear advantage bana liya.</p>
+            <div className="testimonial-grid">
+              <article className="testimonial-card rv">
+                <p>“Website aur Google profile ke bina business ko naye customers milna mushkil tha. onlineajao ne ek hi baar me sab set kar diya.”</p>
+                <div className="person">Rohit Sharma <span>Local Retail Owner</span></div>
+              </article>
+
+              <article className="testimonial-card rv">
+                <p>“Team ka process simple tha aur final result professional. Ab customers direct WhatsApp aur calls par contact karte hain.”</p>
+                <div className="person">Neha Verma <span>Salon Founder</span></div>
+              </article>
+
+              <article className="testimonial-card rv">
+                <p>“Ek clean brand image aur easy online booking ne business ki trust level ko strong kar diya. Highly recommended.”</p>
+                <div className="person">Amit Singh <span>Service Business Owner</span></div>
+              </article>
             </div>
           </div>
         </section>
