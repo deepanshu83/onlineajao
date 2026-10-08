@@ -4,7 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import BrandLogo from './BrandLogo';
 
-export default function Navbar() {
+export default function Navbar({
+  theme = 'light',
+}: {
+  theme?: 'light' | 'dark' | 'sand';
+}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,23 +37,29 @@ export default function Navbar() {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const isDark = theme === 'dark';
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#FFFDF7]/90 backdrop-blur-md border-b border-[#0D0F10]/[0.06] shadow-[0_2px_12px_rgba(13,15,16,0.02)] py-3.5'
+            ? isDark
+              ? 'bg-[#0D0F10]/85 backdrop-blur-md border-b border-white/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.3)] py-3.5'
+              : theme === 'sand'
+              ? 'bg-[#ECE5D3]/90 backdrop-blur-md border-b border-[#0D0F10]/[0.08] shadow-[0_2px_12px_rgba(13,15,16,0.02)] py-3.5'
+              : 'bg-[#FFFDF7]/90 backdrop-blur-md border-b border-[#0D0F10]/[0.06] shadow-[0_2px_12px_rgba(13,15,16,0.02)] py-3.5'
             : 'bg-transparent border-b border-transparent py-5 sm:py-6'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
           {/* Brand Logo */}
           <Link
-            href="#top"
+            href="#hero"
             className="flex items-center group transition-opacity duration-200 hover:opacity-85 focus:outline-none"
             aria-label="ONLINEAJAO Home"
           >
-            <BrandLogo variant="horizontal" height={32} priority />
+            <BrandLogo variant={isDark ? 'reverse' : 'horizontal'} height={32} priority />
           </Link>
 
           {/* Desktop Navigation */}
@@ -58,7 +68,11 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[13px] tracking-wide font-normal text-[#0D0F10]/75 hover:text-[#0D0F10] transition-colors duration-200 relative group py-1"
+                className={`text-[13px] tracking-wide font-normal transition-colors duration-200 relative group py-1 ${
+                  isDark
+                    ? 'text-white/75 hover:text-white'
+                    : 'text-[#0D0F10]/75 hover:text-[#0D0F10]'
+                }`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#AC4526] transition-all duration-300 group-hover:w-full" />
@@ -70,7 +84,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-4 py-2 text-[13px] tracking-wider uppercase font-medium bg-[#0D0F10] text-[#FFFDF7] rounded-sm transition-all duration-200 hover:bg-[#08090A] hover:shadow-subtle hover:-translate-y-0.5 active:translate-y-0"
+              className={`inline-flex items-center justify-center px-4 py-2 text-[13px] tracking-wider uppercase font-medium rounded-sm transition-all duration-200 hover:shadow-subtle hover:-translate-y-0.5 active:translate-y-0 ${
+                isDark
+                  ? 'bg-[#FFFDF7] text-[#0D0F10] hover:bg-[#E3DAB3]'
+                  : 'bg-[#0D0F10] text-[#FFFDF7] hover:bg-[#08090A]'
+              }`}
             >
               Start a Project
             </a>
@@ -80,26 +98,28 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 text-[#0D0F10] focus:outline-none"
+            className={`md:hidden inline-flex items-center justify-center p-2 focus:outline-none ${
+              isDark ? 'text-white' : 'text-[#0D0F10]'
+            }`}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
           >
             <span className="sr-only">Toggle Menu</span>
             <div className="w-5 h-4 relative flex flex-col justify-between">
               <span
-                className={`w-full h-[1.5px] bg-[#0D0F10] transition-transform duration-300 ${
-                  mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
-                }`}
+                className={`w-full h-[1.5px] transition-transform duration-300 ${
+                  isDark ? 'bg-white' : 'bg-[#0D0F10]'
+                } ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`}
               />
               <span
-                className={`w-full h-[1.5px] bg-[#0D0F10] transition-opacity duration-200 ${
-                  mobileMenuOpen ? 'opacity-0' : 'opacity-100'
-                }`}
+                className={`w-full h-[1.5px] transition-opacity duration-200 ${
+                  isDark ? 'bg-white' : 'bg-[#0D0F10]'
+                } ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}
               />
               <span
-                className={`w-full h-[1.5px] bg-[#0D0F10] transition-transform duration-300 ${
-                  mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
-                }`}
+                className={`w-full h-[1.5px] transition-transform duration-300 ${
+                  isDark ? 'bg-white' : 'bg-[#0D0F10]'
+                } ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`}
               />
             </div>
           </button>

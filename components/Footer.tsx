@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-white/[0.08]">
           {/* Brand info */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <Link href="#top" className="mb-6 focus:outline-none" aria-label="ONLINEAJAO Home">
+            <Link href="#hero" className="mb-6 focus:outline-none" aria-label="ONLINEAJAO Home">
               <BrandLogo variant="reverse" height={34} />
             </Link>
             <p className="text-sm text-[#FFFDF7]/65 font-light leading-relaxed max-w-sm mb-6">
@@ -112,7 +112,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <span>Minimal. Restrained. Built for growth.</span>
             <a
-              href="#top"
+              href="#hero"
               className="hover:text-[#FFFDF7] transition-colors inline-flex items-center gap-1"
             >
               <span>Back to top</span>
