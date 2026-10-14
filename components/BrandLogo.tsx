@@ -18,14 +18,14 @@ export default function BrandLogo({
 }: BrandLogoProps) {
   if (variant === 'reverse') {
     return (
-      <div className={`inline-flex items-center gap-3 select-none ${className}`}>
+      <div className={`inline-flex items-center select-none ${className}`}>
         <Image
-          src="/brand/onlineajao-reverse.png"
+          src="/brand/onlineajao-horizontal-light.png"
           alt="ONLINEAJAO"
-          width={180}
+          width={240}
           height={height}
           priority={priority}
-          className="h-8 w-auto object-contain rounded-xs"
+          className="h-7 sm:h-8 w-auto object-contain"
         />
       </div>
     );
@@ -55,19 +55,19 @@ export default function BrandLogo({
           width={120}
           height={120}
           priority={priority}
-          className="h-24 w-24 object-contain"
+          className="h-20 w-20 object-contain"
         />
       </div>
     );
   }
 
-  // Default horizontal logo
+  // Default horizontal logo (dark text on light/sand background)
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <Image
         src="/brand/onlineajao-horizontal-trans.png"
         alt="ONLINEAJAO"
-        width={190}
+        width={240}
         height={height}
         priority={priority}
         className="h-7 sm:h-8 w-auto object-contain"

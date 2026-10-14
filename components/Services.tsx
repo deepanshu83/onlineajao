@@ -97,18 +97,18 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative h-screen min-h-[100svh] w-full flex flex-col justify-between pt-20 sm:pt-28 lg:pt-32 pb-6 sm:pb-8 lg:pb-10 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#0D0F10] select-none"
+      className="relative h-full min-h-[100svh] w-full flex flex-col justify-between pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#0D0F10] select-none"
     >
       {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 w-full">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 sm:gap-4 w-full">
         <div>
-          <div className="inline-flex items-center gap-2 mb-1.5 sm:mb-3">
+          <div className="inline-flex items-center gap-2 mb-1 sm:mb-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#AC4526]" />
             <span className="text-[11px] sm:text-xs tracking-widestLg uppercase text-[#0D0F10]/60 font-medium">
               03 / CAPABILITIES
             </span>
           </div>
-          <h2 className="text-2xl sm:text-5xl md:text-6xl font-normal tracking-[-0.035em] text-[#0D0F10] leading-[1.08]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-normal tracking-[-0.035em] text-[#0D0F10] leading-[1.1]">
             Build the presence. <span className="text-[#0D0F10]/70">Grow the business.</span>
           </h2>
         </div>
@@ -118,7 +118,7 @@ export default function Services() {
       </div>
 
       {/* Main Interactive Stage */}
-      <div className="my-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-center">
+      <div className="my-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-10 items-center">
         {/* Mobile Horizontal Tabs (< lg) */}
         <div className="lg:hidden flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar border-b border-[#0D0F10]/[0.08]">
           {services.map((item) => {
@@ -142,7 +142,7 @@ export default function Services() {
         </div>
 
         {/* Desktop Vertical Service Selector Tabs (>= lg) */}
-        <div className="hidden lg:flex lg:col-span-5 flex-col gap-2 border-t border-[#0D0F10]/[0.10] pt-4">
+        <div className="hidden lg:flex lg:col-span-5 flex-col gap-1.5 border-t border-[#0D0F10]/[0.10] pt-3">
           {services.map((item) => {
             const isSelected = activeService === item.number;
             return (
@@ -151,13 +151,13 @@ export default function Services() {
                 type="button"
                 onMouseEnter={() => setActiveService(item.number)}
                 onClick={() => setActiveService(item.number)}
-                className={`text-left p-3.5 sm:p-4 rounded-sm transition-all duration-200 flex items-center justify-between group ${
+                className={`text-left p-2.5 sm:p-3 rounded-sm transition-all duration-200 flex items-center justify-between group ${
                   isSelected
                     ? 'bg-[#0D0F10] text-[#FFFDF7] shadow-sm'
                     : 'bg-transparent text-[#0D0F10] hover:bg-[#F5F1E7]/70'
                 }`}
               >
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3">
                   <span
                     className={`font-mono text-xs sm:text-sm transition-colors ${
                       isSelected ? 'text-[#E3DAB3]' : 'text-[#0D0F10]/40 group-hover:text-[#AC4526]'
@@ -180,31 +180,31 @@ export default function Services() {
         </div>
 
         {/* Right Column: Active Service Showcase Stage */}
-        <div className="lg:col-span-7 bg-[#F5F1E7]/60 border border-[#0D0F10]/[0.08] rounded-md p-5 sm:p-8 lg:p-10 flex flex-col justify-between shadow-subtle min-h-[260px] sm:min-h-[340px]">
+        <div className="lg:col-span-7 bg-[#F5F1E7]/60 border border-[#0D0F10]/[0.08] rounded-md p-4 sm:p-6 lg:p-7 flex flex-col justify-between shadow-subtle min-h-[240px] sm:min-h-[290px]">
           <div>
-            <div className="flex items-center justify-between mb-2 sm:mb-3">
-              <span className="text-[11px] sm:text-xs font-mono text-[#AC4526] font-medium tracking-wider">
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="text-[10px] sm:text-xs font-mono text-[#AC4526] font-medium tracking-wider">
                 FEATURED SERVICE {current.number}
               </span>
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-widest text-[#0D0F10]/40 font-medium">
+              <span className="text-[10px] uppercase tracking-widest text-[#0D0F10]/40 font-medium">
                 ONLINEAJAO
               </span>
             </div>
 
-            <h3 className="text-lg sm:text-2xl lg:text-3xl font-normal text-[#0D0F10] mb-2 tracking-tight">
+            <h3 className="text-base sm:text-xl lg:text-2xl font-normal text-[#0D0F10] mb-1.5 tracking-tight">
               {current.headline}
             </h3>
 
-            <p className="text-xs sm:text-sm lg:text-base text-[#0D0F10]/70 leading-relaxed font-normal mb-4 sm:mb-6">
+            <p className="text-xs sm:text-sm text-[#0D0F10]/70 leading-relaxed font-normal mb-3 sm:mb-4">
               {current.description}
             </p>
 
             {/* Deliverables Pills */}
-            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 mb-4 sm:mb-6">
+            <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-0.5 mb-3 sm:mb-4">
               {current.deliverables.map((del, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center text-[10px] sm:text-xs text-[#0D0F10]/80 bg-[#FFFDF7] border border-[#0D0F10]/[0.10] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-xs"
+                  className="inline-flex items-center text-[10px] sm:text-[11px] text-[#0D0F10]/80 bg-[#FFFDF7] border border-[#0D0F10]/[0.10] px-2 py-0.5 rounded-xs"
                 >
                   <span className="w-1 h-1 rounded-full bg-[#AC4526] mr-1.5" />
                   {del}
@@ -213,7 +213,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="pt-3 sm:pt-4 border-t border-[#0D0F10]/[0.08] flex items-center justify-between">
+          <div className="pt-2.5 sm:pt-3 border-t border-[#0D0F10]/[0.08] flex items-center justify-between">
             <a
               href="#contact"
               className="inline-flex items-center text-xs tracking-widestLg uppercase font-medium text-[#0D0F10] hover:text-[#AC4526] transition-colors group"

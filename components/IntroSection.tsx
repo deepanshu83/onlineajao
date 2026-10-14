@@ -24,7 +24,7 @@ export default function IntroSection() {
   return (
     <section
       id="intro"
-      className="relative h-screen min-h-[100svh] w-full flex flex-col justify-between pt-20 sm:pt-28 lg:pt-32 pb-6 sm:pb-8 lg:pb-10 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
+      className="relative h-full min-h-[100svh] w-full flex flex-col justify-between pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
     >
       {/* Subtle brand geometry background watermark */}
       <div
@@ -49,32 +49,32 @@ export default function IntroSection() {
       <div className="my-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14 items-center">
         {/* Left Column: Big Headline & Statement */}
         <div className="lg:col-span-7 flex flex-col items-start">
-          <h2 className="text-2xl sm:text-5xl md:text-6xl lg:text-[64px] font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.08] mb-4 sm:mb-8">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[54px] font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.1] mb-3 sm:mb-5">
             Your business deserves <br />
             <span className="text-[#E3DAB3]">more than just a website.</span>
           </h2>
 
-          <p className="text-base sm:text-xl lg:text-2xl text-[#FFFDF7]/85 font-light leading-relaxed max-w-2xl mb-3 sm:mb-5">
+          <p className="text-sm sm:text-lg lg:text-xl text-[#FFFDF7]/85 font-light leading-relaxed max-w-2xl mb-2 sm:mb-4">
             Your website, Google presence and social media should work together — not exist as disconnected pieces.
           </p>
 
-          <p className="text-xs sm:text-base text-[#CABBA8]/80 font-normal leading-relaxed max-w-xl">
+          <p className="text-xs sm:text-sm lg:text-base text-[#CABBA8]/80 font-normal leading-relaxed max-w-xl">
             We build digital experiences that make growing businesses easier to discover, easier to trust and easier to choose.
           </p>
         </div>
 
         {/* Right Column: 3 Pillars Card */}
-        <div className="lg:col-span-5 flex flex-col gap-2.5 sm:gap-3.5 bg-white/[0.03] border border-white/[0.08] rounded-md p-4 sm:p-7 backdrop-blur-sm">
-          <p className="text-[10px] tracking-widestLg uppercase text-[#CABBA8] font-medium mb-1">
+        <div className="lg:col-span-5 flex flex-col gap-2 sm:gap-3 bg-white/[0.03] border border-white/[0.08] rounded-md p-4 sm:p-5 lg:p-6 backdrop-blur-sm">
+          <p className="text-[10px] tracking-widestLg uppercase text-[#CABBA8] font-medium mb-0.5">
             THE INTEGRATED SYSTEM
           </p>
           {pillars.map((pillar) => (
             <div
               key={pillar.num}
-              className="border-t border-white/[0.06] pt-2.5 sm:pt-3.5 first:border-0 first:pt-0"
+              className="border-t border-white/[0.06] pt-2 sm:pt-3 first:border-0 first:pt-0"
             >
-              <div className="flex items-center justify-between mb-0.5 sm:mb-1">
-                <span className="text-xs sm:text-base font-normal text-[#FFFDF7]">
+              <div className="flex items-center justify-between mb-0.5">
+                <span className="text-xs sm:text-sm font-normal text-[#FFFDF7]">
                   {pillar.title}
                 </span>
                 <span className="text-[10px] sm:text-xs font-mono text-[#AC4526] font-medium">

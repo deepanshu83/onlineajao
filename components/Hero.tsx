@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen min-h-[100svh] w-full flex flex-col justify-between pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-8 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto overflow-hidden select-none"
+      className="relative h-full min-h-[100svh] w-full flex flex-col justify-between pt-20 sm:pt-24 lg:pt-28 pb-5 sm:pb-6 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto select-none"
     >
       {/* Subtle brand geometry watermark in background */}
       <div
@@ -28,11 +28,11 @@ export default function Hero() {
       />
 
       {/* Main Hero Content */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center my-auto">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center my-auto">
         {/* Left Column: Editorial Headline & Copy */}
         <div className="lg:col-span-8 flex flex-col items-start max-w-3xl">
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2.5 mb-5 sm:mb-7">
+          <div className="inline-flex items-center gap-2.5 mb-4 sm:mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#AC4526]" />
             <span className="text-[11px] sm:text-xs tracking-widestLg uppercase text-[#0D0F10]/70 font-medium">
               01 / ONLINEAJAO — DIGITAL EXPERIENCES
@@ -40,21 +40,21 @@ export default function Hero() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-normal tracking-[-0.035em] text-[#0D0F10] leading-[1.05] sm:leading-[1.04] mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-normal tracking-[-0.035em] text-[#0D0F10] leading-[1.08] sm:leading-[1.05] mb-4 sm:mb-6">
             Digital experiences <br className="hidden sm:inline" />
             <span className="text-[#0D0F10]/80">for growing businesses.</span>
           </h1>
 
           {/* Supporting Copy */}
-          <p className="text-base sm:text-lg lg:text-xl text-[#0D0F10]/65 font-normal leading-relaxed max-w-2xl mb-8 sm:mb-10">
+          <p className="text-sm sm:text-base lg:text-lg text-[#0D0F10]/65 font-normal leading-relaxed max-w-2xl mb-6 sm:mb-8">
             We design websites and digital systems that help businesses look credible, get discovered, and grow online.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-7 py-4 text-xs tracking-widestLg uppercase font-medium bg-[#0D0F10] text-[#FFFDF7] rounded-sm transition-all duration-300 hover:bg-[#08090A] hover:shadow-floating hover:-translate-y-0.5 active:translate-y-0 group"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-3.5 sm:py-4 text-xs tracking-widestLg uppercase font-medium bg-[#0D0F10] text-[#FFFDF7] rounded-sm transition-all duration-300 hover:bg-[#08090A] hover:shadow-floating hover:-translate-y-0.5 active:translate-y-0 group"
             >
               <span>Start a Project</span>
               <svg
@@ -70,7 +70,7 @@ export default function Hero() {
 
             <a
               href="#services"
-              className="inline-flex items-center justify-center px-7 py-4 text-xs tracking-widestLg uppercase font-medium bg-transparent text-[#0D0F10] border border-[#0D0F10]/15 rounded-sm transition-all duration-200 hover:bg-[#0D0F10]/[0.03] hover:border-[#0D0F10]/30"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-3.5 sm:py-4 text-xs tracking-widestLg uppercase font-medium bg-transparent text-[#0D0F10] border border-[#0D0F10]/15 rounded-sm transition-all duration-200 hover:bg-[#0D0F10]/[0.03] hover:border-[#0D0F10]/30"
             >
               Explore Services
             </a>
@@ -79,7 +79,7 @@ export default function Hero() {
 
         {/* Right Column: Architectural Brand Composition */}
         <div className="lg:col-span-4 hidden lg:flex flex-col items-end justify-center">
-          <div className="relative w-full max-w-[320px] aspect-[4/5] rounded-md overflow-hidden bg-[#0D0F10] border border-[#0D0F10]/10 shadow-elevation group">
+          <div className="relative w-full max-w-[280px] lg:max-w-[300px] aspect-[4/5] rounded-md overflow-hidden bg-[#0D0F10] border border-[#0D0F10]/10 shadow-elevation group">
             <Image
               src="/brand/brand-hero-mark.jpg"
               alt="ONLINEAJAO Emblem"

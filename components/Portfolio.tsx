@@ -69,18 +69,18 @@ export default function Portfolio() {
   return (
     <section
       id="work"
-      className="relative h-screen min-h-[100svh] w-full flex flex-col justify-between pt-20 sm:pt-28 lg:pt-32 pb-6 sm:pb-8 lg:pb-10 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
+      className="relative h-full min-h-[100svh] w-full flex flex-col justify-between pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
     >
       {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 w-full">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 sm:gap-4 w-full">
         <div>
-          <div className="inline-flex items-center gap-2 mb-1.5 sm:mb-3">
+          <div className="inline-flex items-center gap-2 mb-1 sm:mb-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#AC4526]" />
             <span className="text-[11px] sm:text-xs tracking-widestLg uppercase text-[#CABBA8] font-medium">
               05 / SELECTED WORK
             </span>
           </div>
-          <h2 className="text-2xl sm:text-5xl md:text-6xl font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.08]">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.1]">
             Work that makes businesses <br className="hidden sm:inline" />
             <span className="text-[#E3DAB3]">look ready for growth.</span>
           </h2>
@@ -91,7 +91,7 @@ export default function Portfolio() {
       </div>
 
       {/* Main Interactive Presentation */}
-      <div className="my-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-center">
+      <div className="my-auto grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-10 items-center">
         {/* Mobile Horizontal Selector (< lg) */}
         <div className="lg:hidden flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar border-b border-white/[0.08]">
           {projects.map((project) => {
@@ -115,7 +115,7 @@ export default function Portfolio() {
         </div>
 
         {/* Desktop Vertical Project Index List (>= lg) */}
-        <div className="hidden lg:flex lg:col-span-5 flex-col gap-1.5 border-t border-white/[0.10] pt-4">
+        <div className="hidden lg:flex lg:col-span-5 flex-col gap-1 border-t border-white/[0.10] pt-2.5">
           {projects.map((project) => {
             const isSelected = project.id === selectedId;
             return (
@@ -124,24 +124,24 @@ export default function Portfolio() {
                 type="button"
                 onMouseEnter={() => setSelectedId(project.id)}
                 onClick={() => setSelectedId(project.id)}
-                className={`text-left p-3.5 sm:p-4 rounded-sm transition-all duration-200 flex items-center justify-between group ${
+                className={`text-left p-2 sm:p-2.5 rounded-sm transition-all duration-200 flex items-center justify-between group ${
                   isSelected
                     ? 'bg-white/[0.08] text-[#FFFDF7] border-l-2 border-[#AC4526]'
                     : 'bg-transparent text-white/70 hover:bg-white/[0.03]'
                 }`}
               >
                 <div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2.5">
                     <span className="font-mono text-xs text-[#AC4526]">{project.id}</span>
-                    <span className="text-base sm:text-lg font-normal tracking-tight text-[#FFFDF7]">
+                    <span className="text-sm sm:text-base font-normal tracking-tight text-[#FFFDF7]">
                       {project.name}
                     </span>
                   </div>
-                  <p className="text-xs text-white/50 pl-7 mt-0.5">{project.industry}</p>
+                  <p className="text-[11px] text-white/50 pl-6 mt-0.5">{project.industry}</p>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <span className="text-[11px] font-mono text-white/40">{project.year}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-mono text-white/40">{project.year}</span>
                   <span
                     className={`w-1.5 h-1.5 rounded-full transition-all ${
                       isSelected ? 'bg-[#AC4526] scale-125' : 'bg-transparent group-hover:bg-[#AC4526]/40'
@@ -155,7 +155,7 @@ export default function Portfolio() {
 
         {/* Right Column: Cinematic Project Preview Stage */}
         <div className="lg:col-span-7 flex flex-col">
-          <div className="relative w-full aspect-[16/10] max-h-[46vh] rounded-sm overflow-hidden bg-[#08090A] border border-white/[0.12] shadow-elevation">
+          <div className="relative w-full aspect-[16/10] max-h-[38vh] lg:max-h-[42vh] rounded-sm overflow-hidden bg-[#08090A] border border-white/[0.12] shadow-elevation">
             <Image
               src={current.image}
               alt={`${current.name} preview`}
@@ -166,28 +166,28 @@ export default function Portfolio() {
             />
 
             {/* Overlaid Badges */}
-            <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
-              <span className="inline-flex items-center text-[9px] sm:text-[11px] tracking-wider uppercase font-medium bg-[#0D0F10]/80 backdrop-blur-sm text-[#FFFDF7] px-2.5 py-1 rounded-xs border border-white/10">
+            <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-10">
+              <span className="inline-flex items-center text-[9px] sm:text-[10px] tracking-wider uppercase font-medium bg-[#0D0F10]/80 backdrop-blur-sm text-[#FFFDF7] px-2 py-0.5 rounded-xs border border-white/10">
                 {current.tag}
               </span>
             </div>
 
-            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10">
-              <span className="text-[10px] sm:text-[11px] font-mono text-[#FFFDF7] bg-[#0D0F10]/90 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-xs border border-white/10">
+            <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10">
+              <span className="text-[9px] sm:text-[10px] font-mono text-[#FFFDF7] bg-[#0D0F10]/90 px-2 py-0.5 rounded-xs border border-white/10">
                 {current.year}
               </span>
             </div>
 
             {/* Bottom Caption Overlay */}
-            <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-5 bg-gradient-to-t from-[#0D0F10] via-[#0D0F10]/85 to-transparent flex flex-col sm:flex-row sm:items-end justify-between gap-2 sm:gap-3 text-[#FFFDF7]">
+            <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-[#0D0F10] via-[#0D0F10]/85 to-transparent flex flex-col sm:flex-row sm:items-end justify-between gap-1.5 sm:gap-2 text-[#FFFDF7]">
               <div>
-                <p className="text-[10px] sm:text-xs uppercase tracking-widestLg text-[#CABBA8] font-medium">
+                <p className="text-[9px] sm:text-[10px] uppercase tracking-widestLg text-[#CABBA8] font-medium">
                   {current.industry}
                 </p>
-                <h4 className="text-base sm:text-lg font-normal text-[#FFFDF7] mt-0.5">
+                <h4 className="text-sm sm:text-base font-normal text-[#FFFDF7] mt-0.5">
                   {current.name}
                 </h4>
-                <p className="text-xs text-white/70 font-light mt-0.5 max-w-md hidden sm:block">
+                <p className="text-[11px] text-white/70 font-light mt-0.5 max-w-md hidden sm:block">
                   {current.built}
                 </p>
               </div>

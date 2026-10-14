@@ -6,7 +6,7 @@ export default function FinalCTA() {
   return (
     <section
       id="cta"
-      className="relative h-screen min-h-[100svh] w-full flex flex-col justify-between pt-24 sm:pt-28 lg:pt-32 pb-8 sm:pb-10 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
+      className="relative h-full min-h-[100svh] w-full flex flex-col justify-between pt-16 sm:pt-20 lg:pt-24 pb-4 sm:pb-6 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-[#FFFDF7] select-none"
     >
       {/* Subtle brand geometry background watermark */}
       <div
@@ -29,21 +29,21 @@ export default function FinalCTA() {
 
       {/* Main Closing Call Block */}
       <div className="my-auto max-w-3xl mx-auto text-center flex flex-col items-center">
-        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.06] mb-6 sm:mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-[-0.035em] text-[#FFFDF7] leading-[1.08] mb-4 sm:mb-6">
           Ready to build a better <br />
           <span className="text-[#E3DAB3]">digital presence?</span>
         </h2>
 
-        <p className="text-base sm:text-lg lg:text-xl text-[#FFFDF7]/70 font-light leading-relaxed max-w-lg mb-8 sm:mb-12">
+        <p className="text-sm sm:text-base lg:text-lg text-[#FFFDF7]/70 font-light leading-relaxed max-w-lg mb-6 sm:mb-8">
           Tell us what you&apos;re building. <br className="hidden sm:inline" />
           We&apos;ll figure out the next step.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 text-xs tracking-widestLg uppercase font-medium bg-[#FFFDF7] text-[#0D0F10] rounded-sm transition-all duration-300 hover:bg-[#E3DAB3] hover:-translate-y-0.5 active:translate-y-0 shadow-floating"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 text-xs tracking-widestLg uppercase font-medium bg-[#FFFDF7] text-[#0D0F10] rounded-sm transition-all duration-300 hover:bg-[#E3DAB3] hover:-translate-y-0.5 active:translate-y-0 shadow-floating"
           >
             <span>Start a Project</span>
             <span className="ml-2">↓</span>
@@ -53,7 +53,7 @@ export default function FinalCTA() {
             href="https://wa.me/918302909191?text=Hi%20ONLINEAJAO%2C%20I%20would%20like%20to%20start%20a%20project."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-xs tracking-widestLg uppercase font-medium bg-transparent text-[#FFFDF7] border border-white/20 rounded-sm hover:bg-white/[0.05] transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 text-xs tracking-widestLg uppercase font-medium bg-transparent text-[#FFFDF7] border border-white/20 rounded-sm hover:bg-white/[0.05] transition-colors"
           >
             <span>WhatsApp Us</span>
             <svg className="w-3.5 h-3.5 text-[#AC4526]" fill="currentColor" viewBox="0 0 24 24">
